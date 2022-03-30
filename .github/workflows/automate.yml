@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ master ]
   schedule:
-    - cron:  '10 5 * * *'  # 上海时间=utc+8
+    - cron:  '40 3,10 * * *'  # 上海时间=utc+8
   workflow_dispatch:
 
 jobs:
