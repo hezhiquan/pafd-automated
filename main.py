@@ -168,7 +168,7 @@ class Zlapp(Fudan):
         else:
             print("\n\n*******未提交*******")
             self.last_info = last_info["d"]["oldInfo"]
-            # self.close(1) # 关闭提醒，改成自动打卡
+            self.close(1) # 关闭提醒，改成自动打卡
             
     def read_captcha(self, img_byte):
         img = Image.open(io.BytesIO(img_byte)).convert('L')
@@ -304,7 +304,7 @@ if __name__ == '__main__':
 
     daily_fudan.check()
 #     取消自动填写，将其改为提醒打卡（在指定时间前未打卡则通过github自带的邮件服务进行提醒）
-    daily_fudan.checkin()
+#     daily_fudan.checkin()
     # 再检查一遍
-    daily_fudan.check()
-    daily_fudan.close(1)
+#     daily_fudan.check()
+#     daily_fudan.close(1)
